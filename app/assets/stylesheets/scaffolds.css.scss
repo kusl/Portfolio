@@ -1,21 +1,23 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  //font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 1em;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  //font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 1em;
   line-height: 18px;
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px;
+  font-size: 0.9em;
 }
 
 a {
@@ -63,7 +65,7 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 1em;
     list-style: square;
   }
 }

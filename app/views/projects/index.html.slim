@@ -1,29 +1,13 @@
 h1 Listing projects
 
-div.loading
+ul
+- @projects.each do |project|
+  li = link_to project.name, project
+  ul
+    li = project.description
+    li = project.imageUrl
+    li = project.tags
+    li = link_to project.liveUrl, project.liveUrl
 
-table
-  tr
-    th Name
-    th Description
-    th Imageurl
-    th Tags
-    th Liveurl
-    th
-    th
-    th
-
-  - @projects.each do |project|
-    tr
-      td = project.name
-      td = project.description
-      td = project.imageUrl
-      td = project.tags
-      td = project.liveUrl
-      td = link_to 'Show', project
-      td = link_to 'Edit', edit_project_path(project)
-      td = link_to 'Destroy', project, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
 
 = link_to 'New Project', new_project_path
