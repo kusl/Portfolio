@@ -1,8 +1,12 @@
 Portfolio::Application.routes.draw do
 
-  resources :projects
+  get 'about' => 'static_pages#about'
+  get 'projects/:name' => 'projects#show'
+
+  resources :projects, except: [:show]
+
   root :to => 'projects#index'
   
-  get 'about' => 'static_pages#about'
+  
 
 end

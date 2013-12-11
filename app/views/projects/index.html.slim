@@ -2,7 +2,7 @@ h1 Listing projects
 
 ul
 - @projects.each do |project|
-  li = link_to project.name, project
+  li = link_to project.name, '/projects/' + project.name
   ul
     li = project.description
     li = project.imageUrl
