@@ -9,7 +9,7 @@ When(/^I go to the list of projects$/) do
 end
 
 Then(/^I should see "(.*?)"$/) do |name|
-  expect(page).to have_selector('tr td', text: name)
+  expect(page).to have_selector('li', text: name)
 end
 
 When(/^I go to the page for VVMC$/) do

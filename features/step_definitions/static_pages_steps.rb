@@ -1,5 +1,5 @@
 When(/^I go to the about page$/) do
-  visit ('/static_pages/about')
+  visit ('/about')
 end
 
 Then(/^I should see 'About' as the title$/) do

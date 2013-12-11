@@ -5,4 +5,4 @@ Feature: About Info
 
 	Scenario: About Page
 		When I go to the about page
-		Then I should see 'About Me' as the title
+		Then I should see 'About' as the title
