@@ -1,0 +1,11 @@
+<div class="project">
+    <span class="screenshot">{{mainImage}}</span>
+    <ul>
+        <li data-ng-repeat="image in project.screenshots" data-ng-click="setImage(image)">{{image}}</li>
+    </ul>
+    <h2>{{project.name}}</h2>
+    <p>Description: {{project.description}}</p>
+		<p>Tags: {{project.tags}}</p>
+		<p>Live Url: {{project.liveUrl}}</p>
+    
+</div>

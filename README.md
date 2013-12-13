@@ -1,28 +1,22 @@
-== README
+Portfolio
+=========
+This is the source for the interactive portfolio of Jeff Stagg. It consists of a back-end API built in Ruby on Rails,
+and a front-end single page application built in AngularJs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API
+-
+The back-end of this app is built on Rails 4.0 and Ruby 2.0. You can view the tests by running the following command in the root directory:
+		bundle exec cucumber
 
-Things you may want to cover:
+The server can be manually started via
+		rails s
 
-* Ruby version
+AngularJS Front-End
+-
+The front-end of this app is built on AngularJS using the Yeoman Angular generator. You can run tests by running the following command in the 'client' directory:
+		grunt test
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The server can be manually started via
+		grunt serve
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

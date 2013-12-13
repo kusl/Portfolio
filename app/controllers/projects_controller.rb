@@ -1,17 +1,21 @@
 class ProjectsController < ApplicationController
+  
   include AngularController
-
+  
+  before_filter :set_headers 
   before_action :set_project, only: [:edit, :update, :destroy]
+  
+  protect_from_forgery with: :null_session
+
+  respond_to :json
+
 
   # GET /projects
   # GET /projects.json
   def index
     @projects = Project.all
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @projects }
-    end
+    render :json => @projects
   end
 
   # GET /projects/1
@@ -19,10 +23,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find_by(name: params[:name])
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @project }
-    end
+    render json: @project
   end
 
   # GET /projects/new
@@ -84,7 +85,22 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def options
+    set_headers
+    # this will send an empty request to the clien with 200 status code (OK, can proceed)
+    render :text => '', :content_type => 'text/plain'
+  end
+
   private
+    # Set CORS
+    def set_headers
+      headers['Access-Control-Allow-Origin'] = '*'
+      headers['Access-Control-Expose-Headers'] = 'Etag'
+      headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD'
+      headers['Access-Control-Allow-Headers'] = '*, x-requested-with, Content-Type, If-Modified-Since, If-None-Match'
+      headers['Access-Control-Max-Age'] = '86400'
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])

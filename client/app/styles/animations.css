@@ -1,0 +1,107 @@
+.view-container {
+    position: relative;
+}
+
+.view-frame.ng-enter, .view-frame.ng-leave {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.view-frame.ng-enter {
+    -webkit-animation: 0.25s fade-in;
+    -moz-animation: 0.25s fade-in;
+    -o-animation: 0.25s fade-in;
+    animation: 0.25s fade-in;
+    z-index: 100;
+}
+
+.view-frame.ng-leave {
+    -webkit-animation: 0.25s fade-out;
+    -moz-animation: 0.25s fade-out;
+    -o-animation: 0.25s fade-out;
+    animation: 0.25s fade-out;
+    z-index:99;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-moz-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+.project-listing.ng-enter,
+.project-listing.ng-leave,
+.project-listing.ng-move {
+    -webkit-transition: 0.25s linear all;
+    -moz-transition: 0.25s linear all;
+    -o-transition: 0.25s linear all;
+    transition: 0.25s linear all;
+}
+
+.project-listing.ng-enter,
+.project-listing.ng-move {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.project-listing.ng-move.ng-move-active,
+.project-listing.ng-enter.ng-enter-active {
+    opacity: 1;
+    height: 120px;
+}
+
+.project-listing.ng-leave {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.project-listing.ng-leave.ng-leave-active {
+    opacity: 0;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.project .screenshot.ng-enter,
+.project .screenshot.ng-enter-active {
+-webkit-animation: 0.25s fade-in;
+    -moz-animation: 0.25s fade-in;
+    -o-animation: 0.25s fade-in;
+    animation: 0.25s fade-in;
+    z-index: 100;
+}
+
+.project .screenshot.ng-leave,
+.project .screenshot.ng-leave-active {
+    -webkit-animation: 0.25s fade-out;
+    -moz-animation: 0.25s fade-out;
+    -o-animation: 0.25s fade-out;
+    animation: 0.25s fade-out;
+    z-index: 100;
+}

@@ -1,0 +1,11 @@
+<section>
+    <header>Projects</header>
+    Search: <input data-ng-model="query">
+    <ul class="projects">
+        <li data-ng-repeat="project in projects | filter:query" class="project-listing">
+            <p>Name: <a href="/#/projects/{{project.name}}">{{project.name}}</a></p>
+            <p>Description: {{project.description}}</p>
+            <hr>
+        </li>
+    </ul>
+</section>
