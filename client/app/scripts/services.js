@@ -1,5 +1,4 @@
 var portfolioServices = angular.module('portfolioServices', ['ngResource']);
-var apiHost = 'http://localhost\:3000';
 
 portfolioServices.factory('Projects', ['$resource', 
   function($resource) {
@@ -8,3 +7,17 @@ portfolioServices.factory('Projects', ['$resource',
       get: { method:'GET', params: {name: 'name'}, isArray: false}
     });
   }]);
+
+
+//Service
+portfolioServices.service('projectsService', function () {
+	var activeProject;
+	return {
+		getActiveProject: function() {
+			return activeProject;
+		},
+		setActiveProject: function(project) {
+			activeProject = project;
+		}
+	};
+});

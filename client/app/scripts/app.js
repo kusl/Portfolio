@@ -1,5 +1,8 @@
 'use strict';
 
+//global settings
+var apiHost = 'http://localhost\:3000';
+
 //modules
 var portfolioWebApp = angular.module('portfolioWebApp', [
     'ngCookies',
@@ -11,6 +14,9 @@ var portfolioWebApp = angular.module('portfolioWebApp', [
     'portfolioServices',
     'portfolioAnimations'
 ]);
+
+//controllers
+var portfolioControllers = angular.module('portfolioControllers', []);
 
 //routes
 portfolioWebApp.config(['$routeProvider', function($routeProvider) {
